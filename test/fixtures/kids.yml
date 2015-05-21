@@ -3,11 +3,11 @@
 one:
   fname: MyString
   lname: MyString
-  age: 
+  age: 1
   story: MyText
 
 two:
   fname: MyString
   lname: MyString
-  age: 
+  age: 1
   story: MyText
