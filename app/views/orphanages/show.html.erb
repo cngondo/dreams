@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orphanage.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @orphanage.location %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @orphanage.street %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @orphanage.county %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @orphanage.description %>
+</p>
+
+<p>
+  <strong>Founder:</strong>
+  <%= @orphanage.founder %>
+</p>
+
+<p>
+  <strong>Contactno:</strong>
+  <%= @orphanage.contactno %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @orphanage.email %>
+</p>
+
+<%= link_to 'Edit', edit_orphanage_path(@orphanage) %> |
+<%= link_to 'Back', orphanages_path %>

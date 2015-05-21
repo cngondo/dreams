@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Orphanages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Street</th>
+      <th>County</th>
+      <th>Description</th>
+      <th>Founder</th>
+      <th>Contactno</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orphanages.each do |orphanage| %>
+      <tr>
+        <td><%= orphanage.name %></td>
+        <td><%= orphanage.location %></td>
+        <td><%= orphanage.street %></td>
+        <td><%= orphanage.county %></td>
+        <td><%= orphanage.description %></td>
+        <td><%= orphanage.founder %></td>
+        <td><%= orphanage.contactno %></td>
+        <td><%= orphanage.email %></td>
+        <td><%= link_to 'Show', orphanage %></td>
+        <td><%= link_to 'Edit', edit_orphanage_path(orphanage) %></td>
+        <td><%= link_to 'Destroy', orphanage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orphanage', new_orphanage_path %>
