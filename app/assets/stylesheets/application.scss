@@ -24,25 +24,30 @@ $divider-color:        #B6B6B6*/
 
 #land{
 	width: inherit;
-	height: 800px;
-	/*background: url("/assets/bgdreams2.jpg");*/
-	background-size: cover;
-	z-index: 10;
+	background-size: cover;	
+}
+.firstimage{
+	background-size: cover;	
 }
 #jumbo{
 	font-size: 100px;
 	font-family: 'robotothin';
-
 }
-
 #slogan{
 	font-family: 'robotothin';
 }
+.parallax-container {
+      height: 750px;
+    }
 #about{
-	background-image: url("/assets/bgdreams.jpg");
-	background-size: cover;
+	font-family: 'robotothin';
 	height: inherit;
+	font-size: 30px;	
 }
+
 #featured{
 	height: inherit;
+}
+#buttons-register{
+	font-size: 25px
 }
