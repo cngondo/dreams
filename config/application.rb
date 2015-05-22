@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 module Dreamsalive
   class Application < Rails::Application
+    #To capture resources from the assests folder
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << Rails.root.join("app", "assets", "mycss")
+
+    #For all my custom CSS and JS that I'll add
+    config.serve_static_assets = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
