@@ -3,14 +3,14 @@
 <head>
   <title>Dreams Alive</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'stylesheets/mycss', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- <%= stylesheet_link_tag    'stylesheets/mycss', media: 'all', 'data-turbolinks-track' => true %> -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 </head>
 
 <body>
   <% if current_page?(root_path) %>
-      <%= render 'layouts/home_header' %>
+      <%= render 'layouts/homeheader' %>
   <% else %>
       <%= render 'layouts/header' %>
   <% end %>
