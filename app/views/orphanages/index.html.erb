@@ -61,8 +61,12 @@
   <br>
   <br>
   <div class="container" id="rowimages">
-    <article class="col s4">
-      <img src="/assets/img_dreams.jpg" id="imgfeatured">
+    <article class="col s4" style="background: url("/assets/img_dreams.jpg");">     
+      <div class="imghover" style="opacity: 0;">                
+        <a href="#">
+          <h6>View Profile</h6>
+        </a>        
+      </div>
     </article>
     <article class="col s4">
       <img src="/assets/img_dreams1.jpg" id="imgfeatured">
@@ -71,6 +75,7 @@
       <img src="/assets/img_dreams2.jpg" id="imgfeatured">
     </article>
   </div>
+  <br />
   <div class="container" id="rowimages" id="imgfeatured">
     <article class="col s4">
       <img src="/assets/img_dreams3.jpg" id="imgfeatured">
@@ -83,7 +88,19 @@
     </article>
   </div>
  </div>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+      //portfolio - show link
+      $('.imghover').hover(
+        function () {
+          $(this).animate({opacity:'1'});
+        },
+        function () {
+          $(this).animate({opacity:'0'});
+        }
+      );  
+    });
+</script>    
 
  <footer class="page-footer blue white-text">
           <div class="container">
@@ -144,4 +161,4 @@
         <% end %>
       </tbody>
     </table> -->
-    
+
