@@ -69,6 +69,7 @@ class OrphanagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def orphanage_params
-      params.require(:orphanage).permit(:name, :location, :street, :county, :description, :founder, :contactno, :email)
+      params.require(:orphanage).permit(:name, :location, :street, :county, 
+        :description, :founder, :contactno, :email, :image)
     end
 end

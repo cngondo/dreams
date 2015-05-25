@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521203424) do
+ActiveRecord::Schema.define(version: 20150525010340) do
 
   create_table "kids", force: :cascade do |t|
     t.string   "fname",      limit: 255
@@ -23,16 +23,20 @@ ActiveRecord::Schema.define(version: 20150521203424) do
   end
 
   create_table "orphanages", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "location",    limit: 255
-    t.string   "street",      limit: 255
-    t.string   "county",      limit: 255
-    t.text     "description", limit: 65535
-    t.string   "founder",     limit: 255
-    t.string   "contactno",   limit: 255
-    t.string   "email",       limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "name",                limit: 255
+    t.string   "location",            limit: 255
+    t.string   "street",              limit: 255
+    t.string   "county",              limit: 255
+    t.text     "description",         limit: 65535
+    t.string   "founder",             limit: 255
+    t.string   "contactno",           limit: 255
+    t.string   "email",               limit: 255
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
   end
 
   create_table "sponsors", force: :cascade do |t|

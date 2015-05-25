@@ -38,7 +38,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  #Needed for Imagestickto upload images
+  Paperclip.options[:command_path] = "/usr/local/bin/"  
 
+  #Needed for emailing the admin on additional content
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
