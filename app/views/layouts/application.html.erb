@@ -3,13 +3,16 @@
 <head>
   <title>Dreams Alive</title>
     <%= stylesheet_link_tag    'application', media: 'all', 
-    'data-turbolinks-track' => true %>    
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+    'data-turbolinks-track' => true %> 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 
 <body>
-  <nav class="blue">    
+  <nav class="blue"> 
+    <a href="#" class="brand-logo center" id="navtitle">
+      <% link_to '', root_path %>  
+      Dreams Alive</a>   
     <ul id="slide-out" class="side-nav">
       <li><a href="#!">About</a></li>
       <li><a href="#!">Sponsors Portal</a></li>
@@ -21,9 +24,7 @@
       <i class="mdi-navigation-menu"></i>
     </a>
   </nav>
-
   <%= yield %>
-
   <footer class="page-footer blue white-text">
           <div class="container">
             <div class="row">
@@ -49,6 +50,7 @@
             </div>
           </div>
   </footer>
+
   <script type="text/javascript">
     $('.button-collapse').sideNav({
           menuWidth: 300, // Default is 240
@@ -56,6 +58,6 @@
           closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         }
       );
-  </script>  
+  </script>
 </body>
 </html>

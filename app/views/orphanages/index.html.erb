@@ -6,23 +6,8 @@
       });
   </script>
 </head>
-
-  <div class="section white" id="land">
-    <div class="col s12">
-      <h1 class="center-align blue-text text-darken-2 header" id="jumbo">Dreams Alive</h1>
-      <br>
-      <h3 class="center-align blue-text text-darken-3" id="slogan">Keeping children's dreams alive</h3>
-    </div>
- </div>
-
-<div class="parallax-container">
-  <div class="col s12">
-    <div class="parallax">
-      <img src="/assets/bgdreams.jpg" class="bgsky">
-    </div>
-  </div>
-</div>
-
+  <div id="slider" class="homeslider">
+  </div>    
  <div class="row white" id="about">
   <div class="col s6 center-align">
     <h3 class="header blue-text">About Dreams Alive</h3>
@@ -51,14 +36,7 @@
     </div>
   </div>
  </div>
- <div class="parallax-container">
-  <div class="col s12">
-    <div class="parallax">
-      <img src="/assets/bgdreams2.jpg" class="bgsky">
-    </div>
-  </div>
-</div>
-
+ <!-- List of featured orphanages -->
  <div class="row" id="featured">
   <h1 class="header center-align blue-text" id="reg">Featured Orphanages</h1>
   <br>
@@ -91,19 +69,31 @@
     </article>
   </div>
  </div>
-<script type="text/javascript">
-    $(document).ready(function(){
-      //portfolio - show link
-      $('.imghover').hover(
-        function () {
-          $(this).animate({opacity:'1'});
-        },
-        function () {
-          $(this).animate({opacity:'0'});
-        }
-      );  
-    });
-</script>    
+  <script type="text/javascript">
+    $(".homeslider").bgswitcher({
+        // Background images
+        images: ["/assets/bgdreams.jpg", "/assets/bgdreams2.jpg"],
+        effect: "drop", // fade, blind, clip, slide, drop, hide
+        interval: 6000, // Interval of switching
+        loop: true, // Loop the switching
+        shuffle: false, // Shuffle the order of an images
+        duration: 1000, // Effect duration
+        easing: "swing" // Effect easing
+      });
+  </script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        //portfolio - show link
+        $('.imghover').hover(
+          function () {
+            $(this).animate({opacity:'1'});
+          },
+          function () {
+            $(this).animate({opacity:'0'});
+          }
+        );  
+      });
+  </script>    
 
  
     <!-- <table>
@@ -140,4 +130,3 @@
         <% end %>
       </tbody>
     </table> -->
-
