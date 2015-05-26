@@ -25,7 +25,8 @@ $divider-color:        #B6B6B6*/
 #land{
 	width: inherit;
 	background-size: cover;
-	height: 400px;	
+	height: 400px;
+	z-index: 10;	
 }
 .firstimage{
 	background-size: cover;	
