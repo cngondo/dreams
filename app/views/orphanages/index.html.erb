@@ -6,10 +6,11 @@
       });
   </script>
 </head>
+  
   <div id="slider" class="homeslider">
   </div>    
  <div class="row white" id="about">
-  <div class="col s6 center-align">
+  <div class="container center-align">
     <h3 class="header blue-text">About Dreams Alive</h3>
     <p class="text-darken-4">
       Dreams Alive is a platform that helps impoverished children to find a sponsor
@@ -17,7 +18,7 @@
       It provides easy access to the profiles of different orphanages and their contacts and location in detail and also helps the orphanages found in remote areas to get featured online.
     </p>
   </div>
-  <div class="col s6">
+  <div class="container cernter-align">
     <p>
       REGISTER TODAY AS A SPONSOR TO KEEP THE DREAMS OF CHILDREN ALIVE
       OR SIGN UP YOUR ORPHANAGE AND GET FEATURED
@@ -25,8 +26,7 @@
     <br>
     <div class="col s12 center-align" id="buttons-register">
       <a class="waves-effect waves-blue btn-flat blue-text text-darken-4">
-        <%= link_to 'REGISTER', new_orphanage_path %>
-        
+        <%= link_to 'REGISTER', new_orphanage_path %>        
       </a>
       <br>
       <br>
@@ -91,11 +91,10 @@
           function () {
             $(this).animate({opacity:'0'});
           }
-        );  
+        );        
       });
-  </script>    
-
- 
+  </script>
+   
     <!-- <table>
       <thead>
         <tr>

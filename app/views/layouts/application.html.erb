@@ -9,21 +9,30 @@
 </head>
 
 <body>
-  <nav class="blue"> 
-    <a href="#" class="brand-logo center" id="navtitle">
-      <% link_to '', root_path %>  
-      Dreams Alive</a>   
-    <ul id="slide-out" class="side-nav">
-      <li><a href="#!">About</a></li>
-      <li><a href="#!">Sponsors Portal</a></li>
-      <li><a href="#!">Orphanages Portal</a></li>
-      <li><a href="#!">Featured Orphanages</a></li>
-      <li><a href="#!">Donate</a></li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
-      <i class="mdi-navigation-menu"></i>
-    </a>
-  </nav>
+  <div class="navbar-fixed">
+      <div class="nav-wrapper">
+      <nav class="blue"> 
+          <a href="" class="brand-logo center" id="navtitle">
+          <% link_to '', root_path %>  
+          Dreams Alive</a>   
+        <ul id="slide-out" class="side-nav">
+          <li><a href="#about" id="#toabout">About</a></li>
+          <li><a href="#!">Sponsors Portal</a></li>
+          <li><a href="#!">Orphanages Portal</a></li>
+          <li><a href="#!">Featured Orphanages</a></li>
+          <li><a href="#!">Donate</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" 
+        class="button-collapse show-on-large">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+      </nav> 
+    </div>
+  </div>
+  
+
+    
+    
   <%= yield %>
   <footer class="page-footer blue white-text">
           <div class="container">
@@ -58,6 +67,16 @@
           closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         }
       );
+  </script>
+
+  <script type="text/javascript">
+      $(document).ready(function(){ 
+                $("#toabout").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top
+                    }, 1500);
+                });
+            });
   </script>
 </body>
 </html>
