@@ -11,23 +11,43 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :fname %><br>
+<div class="container">
+  <div class="input-field">
+    <%= f.label :first_name %><br>
     <%= f.text_field :fname %>
   </div>
-  <div class="field">
-    <%= f.label :lname %><br>
+  <div class="input-field">
+    <%= f.label :last_name %><br>
     <%= f.text_field :lname %>
   </div>
-  <div class="field">
+  <div class="input-field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+  <div class="input-field">
     <%= f.label :number %><br>
     <%= f.text_field :number %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="input-field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
   </div>
+  <div class="input-field">
+    <%= f.label :state_or_county %><br>
+    <%= f.text_field :state %>
+  </div>
+  <!-- The picture that will be uploaded -->
+  <p>Upload an Image of you looking pretty!</p>
+  <%= f.file_field :image %>
+  <br />
+  <br />
+  <a class="blue waves-effect waves-blue btn"
+    <%= link_to 'Back', sponsors_path %>     
+  </a> |   
+  <button class="actions blue waves-effect waves-blue btn" >
+    <% f.submit %>
+    Create Sponsor    
+  </button>
+</div>
 <% end %>
+

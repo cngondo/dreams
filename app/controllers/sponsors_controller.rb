@@ -55,6 +55,7 @@ class SponsorsController < ApplicationController
   # DELETE /sponsors/1.json
   def destroy
     @sponsor.destroy
+
     respond_to do |format|
       format.html { redirect_to sponsors_url, notice: 'Sponsor was successfully destroyed.' }
       format.json { head :no_content }
@@ -69,6 +70,6 @@ class SponsorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sponsor_params
-      params.require(:sponsor).permit(:fname, :lname, :email, :number)
+      params.require(:sponsor).permit(:fname, :lname, :email, :number, :country, :state, :image)
     end
 end

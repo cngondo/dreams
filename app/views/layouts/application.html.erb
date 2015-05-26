@@ -12,14 +12,14 @@
   <div class="navbar-fixed">
       <div class="nav-wrapper">
       <nav class="blue"> 
-          <a href="" class="brand-logo center" id="navtitle">
-          <% link_to '', root_path %>  
-          Dreams Alive</a>   
+          <h class="center brand-logo fontfor header" id="navtitle">
+            <%= link_to 'Dreams Alive', root_path %> 
+          </h>   
         <ul id="slide-out" class="side-nav">
           <li><a href="#about" id="#toabout">About</a></li>
-          <li><a href="#!">Sponsors Portal</a></li>
-          <li><a href="#!">Orphanages Portal</a></li>
-          <li><a href="#!">Featured Orphanages</a></li>
+          <li class="fontfor"><%= link_to 'Sponsors Portal', sponsors_path %></li>
+          <li></li>
+          <li></li>
           <li><a href="#!">Donate</a></li>
         </ul>
         <a href="#" data-activates="slide-out" 
@@ -28,11 +28,7 @@
         </a>
       </nav> 
     </div>
-  </div>
-  
-
-    
-    
+  </div>    
   <%= yield %>
   <footer class="page-footer blue white-text">
           <div class="container">

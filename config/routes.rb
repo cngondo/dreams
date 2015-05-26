@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :sponsors
   resources :orphanages
 
-  root 'orphanages#index'
-  
+
+  root 'orphanages#index'  
 end

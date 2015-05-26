@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525010340) do
+ActiveRecord::Schema.define(version: 20150526185008) do
 
   create_table "kids", force: :cascade do |t|
     t.string   "fname",      limit: 255
@@ -40,12 +40,18 @@ ActiveRecord::Schema.define(version: 20150525010340) do
   end
 
   create_table "sponsors", force: :cascade do |t|
-    t.string   "fname",      limit: 255
-    t.string   "lname",      limit: 255
-    t.string   "email",      limit: 255
-    t.string   "number",     limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "fname",              limit: 255
+    t.string   "lname",              limit: 255
+    t.string   "email",              limit: 255
+    t.string   "number",             limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "country",            limit: 255
+    t.string   "state",              limit: 255
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
   end
 
 end

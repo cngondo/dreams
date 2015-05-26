@@ -1,8 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sponsors</h1>
-
-<table>
+<div class="container">
+  <h5 class="center fontfor">
+    You also can help to ake a difference in a child's life and keep his/her dream
+    alive
+    <br />
+    <br />
+    <a class="blue waves-effect waves-light btn-large text-darken-4"
+      <%= link_to 'New Sponsor', new_sponsor_path %>       
+    </a>    
+  </h5>
+  <br />
+  <br />
+  <br />  
+  <% @sponsors.each do |sponsor| %>
+  <div class="card">
+      <div class="col s6 card-image">
+        <%= image_tag(sponsor.image.url{:thumb}) %>     
+      </div>
+      <div class="col s6 card-content">
+        <ul>
+          <li><%= sponsor.fname %></li>
+          <li><%= sponsor.lname %></li>
+          <li><%= sponsor.email %></li>
+          <li><%= sponsor.number %></li>
+        </ul>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+        <a href='#'>This is a link</a>
+      </div>
+  </div>
+  <% end %>
+</div>
+<!-- <table>
   <thead>
     <tr>
       <th>Fname</th>
@@ -28,6 +59,5 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Sponsor', new_sponsor_path %>
+<br> -->
+<br />
