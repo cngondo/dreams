@@ -1,12 +1,23 @@
 <!-- #The header that will appear in all the other pages of the app -->
-<nav>
-  <ul class="right hide-on-med-and-down">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-</nav>
+<div class="navbar-fixed">
+      <div class="nav-wrapper">
+      <nav class="blue"> 
+          <h class="center brand-logo fontfor header" id="navtitle">
+            <%= link_to 'Dreams Alive', root_path %> 
+          </h>   
+        <ul id="slide-out" class="side-nav blue-text">
+          <li><a href="#about" id="#toabout">About</a></li>
+          <li class="fontfor"><%= link_to 'Sponsors Portal', sponsors_path %></li>
+          <li class="fontfor">
+            <%= link_to 'Orphanages Portal', new_orphanage_path %>
+          </li>
+          <li></li>
+          <li><a href="#!">Donate</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" 
+        class="button-collapse show-on-large">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+      </nav> 
+    </div>
+  </div> 

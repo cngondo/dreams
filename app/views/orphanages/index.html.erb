@@ -1,13 +1,39 @@
 <p id="notice"><%= notice %></p>
-<head>
-  <script type="text/javascript">
-    $(document).ready(function(){
-        $('.parallax').parallax();
-      });
-  </script>
-</head>
-  
   <div id="slider" class="homeslider">
+      <div class="navbar-fixed">
+        <div class="nav-wrapper">
+        <nav class="navfixed blue"> 
+            <h class="center brand-logo fontfor header" id="navtitle">
+              <%= link_to 'Dreams Alive', root_path %> 
+            </h>
+            <!-- Dropdown for the sign up  -->
+            <ul class="right white-text">
+              <li>
+                <%= link_to 'Sign Up',  new_user_registration_path %>    
+              </li>                             
+              <li>
+                <%= link_to 'Login', new_user_session_path %>
+              </li>
+            </ul>
+          <ul id="slide-out" class="side-nav blue-text">
+            <li><a href="#about" id="#toabout">About</a></li>
+            <li class="fontfor"><%= link_to 'Sponsors Portal', sponsors_path %></li>
+            <li class="fontfor">
+              <%= link_to 'Orphanages Portal', new_orphanage_path %>
+            </li>
+            <li></li>
+            <li><a href="#!">Donate</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" 
+          class="button-collapse show-on-large">
+            <i class="mdi-navigation-menu"></i>
+          </a>
+        </nav> 
+      </div>
+    </div>
+    <!-- Notices and flash messages  -->
+    <!-- <p class="notice"><%= notice %></p> -->
+    <p class="alert"><%= alert %></p>
   </div>    
  <div class="row white" id="about">
   <div class="container center-align">
@@ -71,6 +97,34 @@
     </article>
   </div>
  </div>
+ <script type="text/javascript">
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, 
+      // Does not change width of dropdown to that of the activator
+      hover: false, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false // Displays dropdown below the button
+    }
+  );
+ </script>
+ <script type="text/javascript">
+    $(document).ready(function(){       
+   var scroll_start = 5;
+   var startchange = $('.navfixed');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navfixed').animate({backgroundColor: '#2196F3'},5000)
+       } else {
+          $('.navfixed').animate({backgroundColor: 'transparent'},5000)
+       }
+   });
+});
+
+ </script>
   <script type="text/javascript">
     $(".homeslider").bgswitcher({
         // Background images
@@ -96,8 +150,9 @@
         );        
       });
   </script>
-   
-    <!-- <table>
+   <!-- <br />
+   <br />
+    <table>
       <thead>
         <tr>
           <th>Name</th>

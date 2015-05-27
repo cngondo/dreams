@@ -14,7 +14,7 @@ class OrphanagesController < ApplicationController
 
   # GET /orphanages/new
   def new
-    @orphanage = Orphanage.new
+    @orphanage = current_user.orphanages.build
   end
 
   # GET /orphanages/1/edit
@@ -24,7 +24,7 @@ class OrphanagesController < ApplicationController
   # POST /orphanages
   # POST /orphanages.json
   def create
-    @orphanage = Orphanage.new(orphanage_params)
+    @orphanage = current_user.orphanages.build(orphanage_params)
 
     respond_to do |format|
       if @orphanage.save
@@ -56,7 +56,7 @@ class OrphanagesController < ApplicationController
   def destroy
     @orphanage.destroy
     respond_to do |format|
-      format.html { redirect_to orphanages_url, notice: 'Orphanage was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Orphanage was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
