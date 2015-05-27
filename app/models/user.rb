@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :sponsors
-  has_one :orphanages
+  has_many :orphanages
 end
