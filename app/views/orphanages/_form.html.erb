@@ -1,8 +1,10 @@
+<div class="container col s6 formszote">
 <%= form_for(@orphanage) do |f| %>
   <% if @orphanage.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@orphanage.errors.count, "error") %> prohibited this orphanage from being saved:</h2>
-
+      <h2><%= pluralize(@orphanage.errors.count, "error") %>
+       prohibited this orphanage from being saved:
+     </h2>
       <ul>
       <% @orphanage.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,7 +12,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="input-field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -56,3 +57,9 @@
     Create Institution    
   </button>
 <% end %>
+<br>
+<br>
+</div>
+<div class="col s6">
+  <br>
+</div>
