@@ -25,6 +25,23 @@
 .firstimage{
 	background-size: cover;	
 }
+#noticewrapper{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: #2196F3;
+	opacity: 0.85;
+}
+.alert, .notice{
+		text-align: center;
+		letter-spacing: 1px;
+		background-color: #2196F3;
+		color: #fff; 
+		font-family: 'robotothin';
+		font-weight: 700;		
+	}
+
 #navtitle{
 	font-size: 50px;
 	font-family: 'robotothin';

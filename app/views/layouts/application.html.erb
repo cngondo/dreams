@@ -13,6 +13,16 @@
     <%= render 'layouts/homeheader' %>
 <% else %>
     <%= render 'layouts/header' %>
+<% end %> 
+<!-- Notices and flash messages  -->
+<% if notice %>
+<div id="noticewrapper">
+  <p class="notice"><%= notice %></p>
+</div>  
+<% elsif alert %>
+<div id="noticewrapper">
+   <p class="alert"><%= alert %></p>
+ </div> 
 <% end %>      
   <%= yield %>
   <footer class="page-footer blue white-text">
@@ -57,6 +67,15 @@
                     }, 1500);
                 });
             });
+  </script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        setTimeout(function(){
+          $('#noticewrapper').fadeOut("slow", function(){
+            $(this).remove();
+          })
+        }, 3000);
+      });
   </script>
 </body>
 </html>
