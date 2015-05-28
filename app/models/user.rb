@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :sponsors
   has_many :orphanages
+  has_many :kids
 end
