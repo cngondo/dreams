@@ -58,7 +58,6 @@
         }
       );
   </script>
-
   <script type="text/javascript">
       $(document).ready(function(){ 
                 $("#toabout").click(function() {
@@ -69,13 +68,15 @@
             });
   </script>
   <script type="text/javascript">
-      $(document).ready(function(){
+  var $j = jQuery.noConflict();
+    $j(document).ready(function(){
         setTimeout(function(){
-          $('#noticewrapper').fadeOut("slow", function(){
-            $(this).remove();
+          $j('#noticewrapper').fadeOut("slow", function(){
+            $j(this).remove();
           })
-        }, 3000);
+        }, 4000);
       });
   </script>
+  
 </body>
 </html>
