@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ImageResize (0.0.5)
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
       actionview (= 4.2.1)
@@ -168,6 +169,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ImageResize (~> 0.0.5)
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.0)

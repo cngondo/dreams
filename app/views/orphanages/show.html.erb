@@ -1,46 +1,52 @@
-<%= image_tag @orphanage.avatar.url{:medium} %>
+<div class="container">
+  <div class="col s6">
+    <%= image_tag @orphanage.avatar.url{:medium} %>
+  </div>
 
-<p id="notice"><%= notice %></p>
+  <div class="col s6">
+      <p>
+        <strong>Name:</strong>
+        <%= @orphanage.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @orphanage.name %>
-</p>
+      <p>
+        <strong>Location:</strong>
+        <%= @orphanage.location %>
+      </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @orphanage.location %>
-</p>
+      <p>
+        <strong>Street:</strong>
+        <%= @orphanage.street %>
+      </p>
 
-<p>
-  <strong>Street:</strong>
-  <%= @orphanage.street %>
-</p>
+      <p>
+        <strong>County:</strong>
+        <%= @orphanage.county %>
+      </p>
 
-<p>
-  <strong>County:</strong>
-  <%= @orphanage.county %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @orphanage.description %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @orphanage.description %>
-</p>
+      <p>
+        <strong>Founder:</strong>
+        <%= @orphanage.founder %>
+      </p>
 
-<p>
-  <strong>Founder:</strong>
-  <%= @orphanage.founder %>
-</p>
+      <p>
+        <strong>Contactno:</strong>
+        <%= @orphanage.contactno %>
+      </p>
 
-<p>
-  <strong>Contactno:</strong>
-  <%= @orphanage.contactno %>
-</p>
+      <p>
+        <strong>Email:</strong>
+        <%= @orphanage.email %>
+      </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @orphanage.email %>
-</p>
+      <%= link_to 'Edit', edit_orphanage_path(@orphanage) %> |
+      <%= link_to 'Back', root_path %>
+  </div>
 
-<%= link_to 'Edit', edit_orphanage_path(@orphanage) %> |
-<%= link_to 'Back', orphanages_path %>
+
+</div>

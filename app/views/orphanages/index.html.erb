@@ -1,125 +1,77 @@
   <div id="slider" class="homeslider">
-      <div class="navbar-fixed">
-        <div class="nav-wrapper">
-        <nav class="navfixed N/A transparent"> 
-           <!--  <small class="center brand-logo fontfor header" id="navtitle">
-              <%= link_to 'Dreams Alive', root_path %> 
-            </small> -->
-            <ul class="right white-text">
-              <li>
-                <%= link_to 'Sign Up', new_user_registration_path %>    
-              </li>                             
-              <li>
-                <%= link_to 'Login', new_user_session_path %>
-              </li>
-            </ul>
-          <ul id="slide-out" class="side-nav blue-text">
-            <li><a href="#about" id="#toabout">About</a></li>
-            <li class="fontfor"><%= link_to 'Sponsors Portal', sponsors_path %></li>
-            <li class="fontfor">
-              <%= link_to 'Orphanages Portal', new_orphanage_path %>
-            </li>
-            <li></li>
-            <li><a href="#!">Donate</a></li>
-          </ul>
-          <a href="#" data-activates="slide-out" 
-          class="button-collapse show-on-large">
-            <i class="mdi-navigation-menu"></i>
-          </a>
-        </nav> 
-      </div>
-    </div> 
-    <br />
-    <br />
-    <div class="container center-align blue-text" id="jumbotron">
+    <div class="col s4"><br></div>
+    <div class="col s4"><br></div>
+    <div class="right-align blue-text col s4" id="jumbotron">
       <h1 class="center fontfor header">
         Dreams Alive
       </h1>
       <h3 class="center fontfor">
         Keeping childern's dreams alive
       </h3>
-    </div>   
-  </div> 
-  <script type="text/javascript">
-    var $j = jQuery.noConflict();
-    $j('.homeslider').bgswitcher({
-        // Background images
-        images: ["/assets/bgdreams.jpg", "/assets/bgdreams2.jpg"],
-        effect: "drop", // fade, blind, clip, slide, drop, hide
-        interval: 6000, // Interval of switching
-        loop: true, // Loop the switching
-        shuffle: false, // Shuffle the order of an images
-        duration: 1000, // Effect duration
-        easing: "swing" // Effect easing
-      });
-
- </script>   
- <div class="row white" id="about">
-  <div class="container center-align">
-    <h3 class="header blue-text">About Dreams Alive</h3>
-    <p class="text-darken-4">
-      Dreams Alive is a platform that helps impoverished children to find a sponsor
-      through the respective children orphanages that they belong to.
-      It provides easy access to the profiles of different orphanages and their contacts and location in detail and also helps the orphanages found in remote areas to get featured online.
+      <p class="pabout text-darken-4">
+        Dreams Alive is a platform that helps impoverished children to find a sponsor
+        through the respective children orphanages that they belong to.
+        It provides easy access to the profiles of different orphanages and their contacts and location in detail and also helps the orphanages found in remote areas to get featured online.
     </p>
-  </div>
-  <div class="container cernter-align">
-    <p>
+    <br>
+    <p class="pabout">
       REGISTER TODAY AS A SPONSOR TO KEEP THE DREAMS OF CHILDREN ALIVE
       OR SIGN UP YOUR ORPHANAGE AND GET FEATURED
     </p>
     <br>
-    <div class="col s12 center-align" id="buttons-register">
-      <a class="waves-effect waves-blue btn-flat blue-text text-darken-4">
-        <%= link_to 'REGISTER', new_orphanage_path %>        
-      </a>
-      <br>
-      <br>
-      <a class="waves-effect waves-blue btn-flat blue-text text-darken-4">
-        <%= link_to 'SPONSOR', new_sponsor_path %>
-      </a>
+    <div class="row">
+      <div class="col s6 center">
+        <%= link_to 'REGISTER', new_orphanage_path, 
+        class:"left-align blue waves-effect waves-light btn-large" %> 
+      </div>
+      <div class="col s6 center">
+        <%= link_to 'SPONSOR', new_sponsor_path, 
+        class:"right-align blue waves-effect waves-light btn-large" %>
+      </div>
+        
+        
     </div>
-  </div>
- </div>
+    
+    </div>   
+  </div>   
+ 
  <!-- List of featured orphanages -->
  <div class="row" id="featured">
   <h1 class="header center-align blue-text" id="reg">Featured Orphanages</h1>
   <br>
   <br>
   <div class="container" id="rowimages">
-    <article class="col s4" 
-        style="background: url("/assets/img_dreams.jpg");">     
-      <div class="imghover" 
-      style="opacity: 0; background: url("/assets/img_dreams.jpg");">         
-        <a href="#">
-          <h6>View Profile</h6>
-        </a>        
+    <% @orphanages.each do |orphanage| %>
+    <div class="col s4">
+      <div class="card medium">
+        <div class="card-image waves-effect waves-block waves-light">
+          <%= image_tag orphanage.avatar.url{:medium}, class: "activator" %>
+        </div>
+        <div class="card-content">
+          <span class="card-title activator">
+            <%= orphanage.name %>
+          </span>
+          <p><%= link_to 'More Details', orphanage %></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title black-text">
+            <%= orphanage.name %>
+            <i class="mdi-navigation-close right black-text"></i>
+          </span>
+          <p>
+            <%= orphanage.description %>
+          </p>
+        </div>
       </div>
-    </article>
-    <article class="col s4">
-      <img src="/assets/img_dreams1.jpg" id="imgfeatured">
-    </article>
-    <article class="col s4">
-      <img src="/assets/img_dreams2.jpg" id="imgfeatured">
-    </article>
+    </div>
+    <% end %>
   </div>
-  <br />
-  <div class="container" id="rowimages" id="imgfeatured">
-    <article class="col s4">
-      <img src="/assets/img_dreams3.jpg" id="imgfeatured">
-    </article>
-    <article class="col s4">
-      <img src="/assets/img_dreams5.jpg" id="imgfeatured">
-    </article>
-    <article class="col s4">
-      <img src="/assets/img_dreams.jpg" id="imgfeatured">
-    </article>
-  </div>
+  <br />  
  </div>
  <script type="text/javascript">
   var $j = jQuery.noConflict();
     $j('.button-collapse').sideNav({
-          menuWidth: 300, // Default is 240
+          menuWidth: 400, // Default is 240
           edge: 'left', // Choose the horizontal origin
           closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         }

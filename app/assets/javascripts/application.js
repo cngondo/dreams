@@ -16,3 +16,14 @@
 // = require materialize-sprockets 
 // = require_tree   
 //  
+// var $j = jQuery.noConflict();
+//     $j('.homeslider').bgswitcher({
+//         // Background images
+//         images: ["/assets/bgdreams.jpg", "/assets/bgdreams2.jpg"],
+//         effect: "drop", // fade, blind, clip, slide, drop, hide
+//         interval: 6000, // Interval of switching
+//         loop: true, // Loop the switching
+//         shuffle: false, // Shuffle the order of an images
+//         duration: 1000, // Effect duration
+//         easing: "swing" // Effect easing
+//       });

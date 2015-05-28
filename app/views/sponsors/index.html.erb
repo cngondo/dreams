@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <div class="container">
   <h5 class="center fontfor">
     You also can help to ake a difference in a child's life and keep his/her dream
@@ -10,11 +9,9 @@
       <%= link_to 'New Sponsor', new_sponsor_path %>       
     </a>    
   </h5>
-  <br />
-  <br />
   <br />  
   <% @sponsors.each do |sponsor| %>
-  <div class="card">
+  <div class="card large">
       <div class="col s6 card-image">
         <%= image_tag(sponsor.image.url{:thumb}) %>     
       </div>
@@ -27,8 +24,8 @@
         </ul>
       </div>
       <div class="card-action">
-        <a href="#">This is a link</a>
-        <a href='#'>This is a link</a>
+        <!-- <a href="#">This is a link</a>
+        <a href='#'>This is a link</a> -->
       </div>
   </div>
   <% end %>

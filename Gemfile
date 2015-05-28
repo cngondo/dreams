@@ -21,6 +21,8 @@ gem 'devise', '~> 3.5.0'
 gem 'materialize-sass'
 #paperclip to upload pictures from the computer
 gem "paperclip", "~> 4.2"
+# to resize images
+gem 'ImageResize', '~> 0.0.5'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
