@@ -14,6 +14,7 @@
 
 .fontfor{
 	font-family: 'robotothin';
+	font-weight: 500;
 }
 
 #land{
@@ -43,7 +44,7 @@
 	}
 
 #navtitle{
-	font-size: 50px;
+	font-size: 30px;
 	font-family: 'robotothin';
 }
 #slider{
@@ -51,7 +52,20 @@
 	height: 800px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: relative;
+
 }
+#jumbotron{
+	width: 700px;
+	height: 300px;
+	background-color: #fff;
+	opacity: 0.9;
+	z-index: 10;
+	border-radius: 25px;
+	font-size: 75px;
+	/*position: absolute;	*/
+}
+
 #slogan{
 	font-family: 'robotothin';
 }
