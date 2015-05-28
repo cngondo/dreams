@@ -16,7 +16,7 @@ class SponsorsController < ApplicationController
 
   # GET /sponsors/new
   def new
-    @sponsor = Sponsor.new
+    @sponsor = current_user.sponsors.build
   end
 
   # GET /sponsors/1/edit
@@ -26,7 +26,7 @@ class SponsorsController < ApplicationController
   # POST /sponsors
   # POST /sponsors.json
   def create
-    @sponsor = Sponsor.new(sponsor_params)
+    @sponsor = current_user.sponsors.build(sponsor_params)
 
     respond_to do |format|
       if @sponsor.save

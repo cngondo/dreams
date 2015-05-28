@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(@kid) do |f| %>
   <% if @kid.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +12,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :fname %><br>
+  <div class="input-field">
+    <%= f.label :first_name %><br>
     <%= f.text_field :fname %>
   </div>
-  <div class="field">
-    <%= f.label :lname %><br>
+  <div class="input-field">
+    <%= f.label :last_name %><br>
     <%= f.text_field :lname %>
   </div>
-  <div class="field">
+  <div class="input-field">
     <%= f.label :age %><br>
     <%= f.number_field :age %>
   </div>
@@ -27,7 +28,11 @@
     <%= f.label :story %><br>
     <%= f.text_area :story %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <%= link_to 'Back', orphanage_path, 
+  class:"btn blue waves-effect waves-light" %>
+  <div class="actions btn blue waves-effect waves-light">
+    <% f.submit %>
+    Add Child to Wall
   </div>
 <% end %>
+</div>
