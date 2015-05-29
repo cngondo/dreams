@@ -6,14 +6,14 @@
             <%= link_to 'Dreams Alive', root_path %> 
           </h>   
         <ul id="slide-out" class="side-nav blue-text">
-          <li><%= link_to 'Home', root_path %></li>
-          <li class="fontfor">
-            <%= link_to 'Sponsors Portal', sponsors_path %></li>
-          <li class="fontfor">
-            <%= link_to 'Orphanages Portal', new_orphanage_path %>
+          <li><%= link_to 'Home', root_path, class:"blue-text" %></li>
+          <li>
+            <%= link_to 'The Sponsors', sponsors_path, class:"blue-text" %></li>
+          <li>
+            <%= link_to 'The Orphanages', new_orphanage_path, 
+            class:"blue-text"%>
           </li>
-          <li><%= link_to 'The Sponsors', sponsors_path %></li>
-          <li><a href="#!">Donate</a></li>
+          <li class="blue-text"><a href="#!">Donate</a></li>
         </ul>
         <a href="#" data-activates="slide-out" 
         class="button-collapse show-on-large">

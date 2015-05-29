@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Dreams Alive</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 
+    <%= stylesheet_link_tag 'application', media: 'all', 
     'data-turbolinks-track' => true %> 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,19 +28,21 @@
   <footer class="page-footer blue white-text">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
+              <div class="col s6">
                 <h5 class="white-text fontfor">Dreams Alive</h5>
                 <p class="grey-text text-lighten-4">
                   Keeping children's dreams alive
                 </p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text fontfor">Links</h5>
+              <div class="col s6">
+                <h5 class="fontfor text-darken-4">Links</h5>
                 <ul>
-                  <li><%= link_to 'Home', root_path %></li>
-                  <li><%= link_to 'Sponsors', sponsors_path %></li>
-                  <li><%= link_to 'Home', root_path %></li>
-                  <li><%= link_to 'Credits', root_path %></li>
+                  <li><%= link_to 'Home', root_path, 
+                  class:"white-text text-darken-4" %></li>
+                  <li><%= link_to 'Sponsors', sponsors_path, 
+                  class:"white-text text-darken-4" %></li>
+                  <li><%= link_to 'Credits', root_path, 
+                  class:"white-text text-darken-4" %></li>
                 </ul>
               </div>
             </div>
@@ -48,7 +50,6 @@
           <div class="footer-copyright">
             <div class="container">
             © 2015 Copyright Cornellius Ngondo
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
   </footer>

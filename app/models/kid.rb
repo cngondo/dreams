@@ -1,5 +1,5 @@
 class Kid < ActiveRecord::Base
-	has_one :orphanage
+	has_many :orphanages
 	belongs_to :user 
 
 	has_attached_file :image, :styles => { :medium => "300x300#", :thumb => "100x100#" }
