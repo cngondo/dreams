@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529024050) do
+ActiveRecord::Schema.define(version: 20150529035826) do
 
   create_table "kids", force: :cascade do |t|
     t.string   "fname",              limit: 255
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150529024050) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
     t.string   "username",           limit: 255
+    t.integer  "user_id",            limit: 4
   end
 
   create_table "users", force: :cascade do |t|
