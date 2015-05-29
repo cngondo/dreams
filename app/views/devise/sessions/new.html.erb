@@ -4,7 +4,7 @@
 <div class="container">
   <div class="input-field">
     <%= f.label :Username %><br />
-    <%= f.email_field :username, autofocus: true %>
+    <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="input-field">
@@ -19,7 +19,7 @@
     </div>
   <% end -%>
   <br />
-  <div class="actions">
+  <div class="actions btn blue white-text waves-effect waves-light">
     <%= f.submit "Log in" %>
   </div>
 </div>

@@ -28,7 +28,11 @@
     <%= f.label :story %><br>
     <%= f.text_area :story %>
   </div>
-  <%= link_to 'Back', orphanage_path, 
+  <p>Upload an Image of the child</p>
+  <%= f.file_field :image %>
+  <br>
+  <br>
+  <%= link_to 'Back', root_path, 
   class:"btn blue waves-effect waves-light" %>
   <div class="actions btn blue waves-effect waves-light">
     <% f.submit %>

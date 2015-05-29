@@ -15,7 +15,7 @@ class KidsController < ApplicationController
 
   # GET /kids/new
   def new
-    @kid = Kid.new
+    @kid = current_user.kids.build
   end
 
   # GET /kids/1/edit
@@ -25,7 +25,7 @@ class KidsController < ApplicationController
   # POST /kids
   # POST /kids.json
   def create
-    @kid = Kid.new(kid_params)
+    @kid = current_user.kids.build(kid_params)
 
     respond_to do |format|
       if @kid.save
@@ -70,6 +70,6 @@ class KidsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kid_params
-      params.require(:kid).permit(:fname, :lname, :age, :story)
+      params.require(:kid).permit(:fname, :lname, :age, :story, :image)
     end
 end
