@@ -1,50 +1,9 @@
-  <div id="slider" class="homeslider">
-    <div class="col s4"><br></div>
-    <div class="col s4"><br></div>
-    <div class="right-align blue-text col s4" id="jumbotron">
-      <div class="center-align" id="login">        
-        <%= link_to 'Log In', new_user_session_path %> ||
-        <%= link_to 'Sign Up', new_user_registration_path %> 
-      </div>
-      <h1 class="center fontfor header">
-        Dreams Alive
-      </h1>
-      <h5 class="center fontfor">
-        Keeping children's dreams alive
-      </h5>
-      <p class="pabout text-darken-4">
-        Dreams Alive is a platform that helps impoverished children to find a sponsor
-        through the respective children orphanages that they belong to.
-        It provides easy access to the profiles of different orphanages and their contacts and location in detail and also helps the orphanages found in remote areas to get featured online.
-    </p>
-    <br>
-    <p class="pabout">
-      REGISTER TODAY AS A SPONSOR TO KEEP THE DREAMS OF CHILDREN ALIVE
-      OR SIGN UP YOUR ORPHANAGE AND GET FEATURED
-    </p>
-    <br>
-    <div class="row">
-      <div class="col s6 center">
-        <%= link_to 'YOUR ORPHANAGE', new_orphanage_path, 
-        class:"left-align blue waves-effect waves-light btn-large" %> 
-      </div>
-      <div class="col s6 center">
-        <%= link_to 'REGISTER AS SPONSOR', sponsors_path, 
-        class:"right-align blue waves-effect waves-light btn-large" %>
-      </div>        
-    </div>    
-    </div>   
-  </div>   
- 
- <!-- List of featured orphanages -->
- <div class="row" id="featured">
-  <h1 class="header center-align blue-text" id="reg">Featured Orphanages</h1>
-  <br>
-  <br>
-  <div class="container" id="rowimages">
+<h1 class="fontfor blue-text container center">The Orphanages</h1>
+
+<div class="container" id="rowimages">
     <% @orphanages.each do |orphanage| %>
-    <div class="col s4">
-      <div class="card medium">
+    <div class="col s12">
+      <div class="card large">
         <div class="card-image waves-effect waves-block waves-light">
           <%= image_tag orphanage.avatar.url{:medium}, class: "activator" %>
         </div>
@@ -64,66 +23,5 @@
           </p>
         </div>
       </div>
-    </div>
+      </div>
     <% end %>
-  </div>
-  <br />  
- </div>
- <script type="text/javascript">
-  var $j = jQuery.noConflict();
-    $j('.button-collapse').sideNav({
-          menuWidth: 400, // Default is 240
-          edge: 'left', // Choose the horizontal origin
-          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        }
-      );
-  </script>
- <script type="text/javascript">
-      $(document).ready(function(){
-        //portfolio - show link
-        $('.imghover').hover(
-          function () {
-            $(this).animate({opacity:'1'});
-          },
-          function () {
-            $(this).animate({opacity:'0'});
-          }
-        );        
-      });
-  </script>
-  <!--  <br />
-   <br />
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Location</th>
-          <th>Street</th>
-          <th>County</th>
-          <th>Description</th>
-          <th>Founder</th>
-          <th>Contactno</th>
-          <th>Email</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        # <% @orphanages.each do |orphanage| %>
-          <tr>
-            <td><%= orphanage.name %></td>
-            <td><%= orphanage.location %></td>
-            <td><%= orphanage.street %></td>
-            <td><%= orphanage.county %></td>
-            <td><%= orphanage.description %></td>
-            <td><%= orphanage.founder %></td>
-            <td><%= orphanage.contactno %></td>
-            <td><%= orphanage.email %></td>
-            <td><%= link_to 'Show', orphanage %></td>
-            <td><%= link_to 'Edit', edit_orphanage_path(orphanage) %>
-            </td>
-            <td><%= link_to 'Destroy', orphanage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table> -->
